@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* perruqueria
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-28 17:33+0000\n"
+"PO-Revision-Date: 2023-11-28 18:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: perruqueria
+#: model:ir.model,name:perruqueria.model_res_partner
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__create_uid
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__create_date
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__create_date
+msgid "Created on"
+msgstr "Creat a"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__customer_ids
+msgid "Customer"
+msgstr "Client"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__date
+msgid "Data"
+msgstr "Data"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__description
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__description
+msgid "Description"
+msgstr "Descripció"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__display_name
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__display_name
+msgid "Display Name"
+msgstr "Nom per a mostrar"
+
+#. module: perruqueria
+#: model:ir.actions.act_window,name:perruqueria.action_event
+#: model:ir.ui.menu,name:perruqueria.menu_event
+msgid "Esdeveniments"
+msgstr "Esdeveniments"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__event_id
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__event_id
+msgid "Event"
+msgstr "Esdeveniment"
+
+#. module: perruqueria
+#: model:ir.actions.act_window,name:perruqueria.action_formacio
+#: model:ir.model.fields,field_description:perruqueria.field_res_partner__trainer_ids
+#: model:ir.model.fields,field_description:perruqueria.field_res_users__trainer_ids
+#: model:ir.ui.menu,name:perruqueria.menu_formacio
+#: model_terms:ir.ui.view,arch_db:perruqueria.view_partner_form
+msgid "Formacions"
+msgstr "Formacions"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__id
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__id
+msgid "ID"
+msgstr "ID"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event____last_update
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio____last_update
+msgid "Last Modified on"
+msgstr "Última modificació"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__write_uid
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__write_date
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__write_date
+msgid "Last Updated on"
+msgstr "Última actualització a"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__manager_id
+#: model:res.groups,name:perruqueria.group_perruqueria_manager
+#: model_terms:ir.ui.view,arch_db:perruqueria.view_formacio_search
+msgid "Manager"
+msgstr "Mànager"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__name
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__name
+#: model_terms:ir.ui.view,arch_db:perruqueria.view_formacio_form
+#: model_terms:ir.ui.view,arch_db:perruqueria.view_formacio_search
+msgid "Name"
+msgstr "Nom"
+
+#. module: perruqueria
+#: model:ir.module.category,name:perruqueria.module_category_perruqueria
+#: model:ir.ui.menu,name:perruqueria.menu_perruqueria
+msgid "Perruqueria"
+msgstr "Perruqueria"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_event__prize
+msgid "Prize"
+msgstr "Preu"
+
+#. module: perruqueria
+#: model:ir.model.fields,field_description:perruqueria.field_perruqueria_formacio__trainer_id
+msgid "Trainer"
+msgstr "Formador"
+
+#. module: perruqueria
+#: model:ir.model,name:perruqueria.model_perruqueria_event
+msgid "Training Event"
+msgstr "Esdeveniment de formació"
+
+#. module: perruqueria
+#: model:ir.model,name:perruqueria.model_perruqueria_formacio
+msgid "Training for barbershops"
+msgstr "Formació per a barbers"
+
+#. module: perruqueria
+#: model:res.groups,name:perruqueria.group_perruqueria_user
+msgid "User"
+msgstr "Usuari"

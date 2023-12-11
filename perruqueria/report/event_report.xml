@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <report
+            id="report_formacio"
+            model="perruqueria.formacio"
+            string="Formacio Report"
+            name="perruqueria.report_formacio_view"
+            file="perruqueria.report_formacio"
+            report_type="qweb-html"/>
+        <template id="report_formacio_view">
+            <div class="text-right mt-2 mr-2 style= ">
+                <h3 style="font-size:1.4.em"><b>FEM TOT EL QUE ET PASSI PEL CAP</b></h3>
+            </div>
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="row mt32 mb32 d-flex align-items-center">
+                                <h2 class="text-center col-12">Training:</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <p>Training:</p>
+                                    <p>Description:</p>
+                                    <p>Event:</p>
+                                    <p>Manager:</p>
+                                    <p>Trainer:</p>
+                                </div>
+                                <div class="col-4">
+                                    <p><span t-field="doc.name"/></p>
+                                    <p><span t-field="doc.description"/></p>
+                                    <p><span t-field="doc.event_id"/></p>
+                                    <p><span t-field="doc.manager_id"/></p>
+                                    <p> <span t-field="doc.trainer_id"/></p>
+                                </div>
+                            </div>
+                            <div class="row mt32 mb32 d-flex align-items-center">
+                                <h2 class="text-center col-12">Assistants:</h2>
+                            </div>
+                            <div class="row">
+                                <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="color: #FFD700">NAME</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="doc.customer_ids" t-as="customer">
+                                        <td><span t-field="customer.name"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

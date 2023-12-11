@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de llista per al model Formacio -->
+    <record id="view_formacio_tree" model="ir.ui.view">
+        <field name="name">perruqueria.formacio.tree</field>
+        <field name="model">perruqueria.formacio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="manager_id"/>
+                <field name="trainer_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista d'arbre per al model Formacio -->
+    <record id="view_formacio_form" model="ir.ui.view">
+        <field name="name">perruqueria.formacio.form</field>
+        <field name="model">perruqueria.formacio</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <div class="oe_title">
+                            <label for="name" string="Name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="manager_id"/>
+                        <field name="trainer_id"/>
+                        <field name="customer_ids"/>
+                        <field name="event_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de llista per al model Event -->
+    <record id="view_event_tree" model="ir.ui.view">
+        <field name="name">perruqueria.event.tree</field>
+        <field name="model">perruqueria.event</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="prize"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista d'arbre per al model Event -->
+    <record id="view_event_form" model="ir.ui.view">
+        <field name="name">perruqueria.event.form</field>
+        <field name="model">perruqueria.event</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="date"/>
+                    <field name="prize"/>
+                    <field name="event_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_formacio_search" model="ir.ui.view">
+        <field name="name">perruqueria.formacio.search</field>
+        <field name="model">perruqueria.formacio</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Name"/>
+                <field name="manager_id" string="Manager"/>
+            </search>
+        </field>
+    </record>
+    <!-- Accions per a les vistes -->
+    <record id="action_formacio" model="ir.actions.act_window">
+        <field name="name">Formacions</field>
+        <field name="res_model">perruqueria.formacio</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_formacio_search"/>
+    </record>
+
+    <record id="action_event" model="ir.actions.act_window">
+        <field name="name">Esdeveniments</field>
+        <field name="res_model">perruqueria.event</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú per accedir als models Formacio i Event -->
+    <menuitem id="menu_perruqueria" name="Perruqueria" sequence="30"/>
+
+    <!-- Opció de menú per a Formacio -->
+    <menuitem id="menu_formacio" name="Formacions" parent="menu_perruqueria" action="action_formacio" sequence="10"/>
+
+    <!-- Opció de menú per a Event -->
+    <menuitem id="menu_event" name="Esdeveniments" parent="menu_perruqueria" action="action_event" sequence="20"/>
+
+</odoo>

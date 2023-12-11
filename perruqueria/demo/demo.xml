@@ -1,0 +1,108 @@
+<odoo>
+    <data>
+          <record id="empleat1" model="hr.employee">
+            <field name="name">Karl Marx</field>
+            <field name="mobile_phone">666666666</field>
+            <field name="work_email">karlitos@socialismo.com</field>
+            <field name="job_title">Senior Perruquer</field>
+          </record>
+
+          <record id="empleat2" model="hr.employee">
+            <field name="name">Maria Magdalena</field>
+            <field name="mobile_phone">777777777</field>
+            <field name="work_email">lamagda@magdalena.com</field>
+            <field name="job_title">Senior Perruquer</field>
+          </record>
+
+          <record id="empleat3" model="hr.employee">
+            <field name="name">Antonio Vivaldi</field>
+            <field name="work_email">toni@vivaldi.com</field>
+            <field name="job_title">Senior Perruquer</field>
+          </record>
+
+          <record id="company1" model="res.partner">
+            <field name="name">Sabons ecològics</field>
+            <field name="company_type" eval="'company'"/>
+            <field name="street">Fake street, 123</field>
+            <field name="city">Springfield</field>
+            <field name="zip">99000</field>
+            <field name="country_id" ref="base.us"/>
+            <field name="phone">985666667</field>
+            <field name="email">sabonsecologics@sabonsecologics.com</field>
+            <field name="website">http://www.sabonsecologics.com</field>
+          </record>
+
+          <record id="company2" model="res.partner">
+            <field name="name">Tints de proximitat</field>
+            <field name="company_type" eval="'company'"/>
+            <field name="street">Carrer de la Tintoreria, 23</field>
+            <field name="city">Sant Hipòlit de Voltregà</field>
+            <field name="zip">99001</field>
+            <field name="country_id" ref="base.es"/>
+            <field name="phone">985666666</field>
+            <field name="email">tintsproxims@tintsproxims.cat</field>
+            <field name="website">http://www.tintsproxims.cat</field>
+          </record>
+
+         <record id="company3" model="res.partner">
+            <field name="name">La confraria del menhir</field>
+            <field name="company_type" eval="'company'"/>
+            <field name="street">Carrer Major, 1</field>
+            <field name="city">Vila de Su</field>
+            <field name="zip">99002</field>
+            <field name="country_id" ref="base.es"/>
+            <field name="phone">985666668</field>
+            <field name="email">menhir@menhir.cat</field>
+            <field name="website">http://www.menhir.cat</field>
+         </record>
+
+         <record id="event1" model="perruqueria.event">
+            <field name="name">Les perruqueries al S. XIX</field>
+            <field name="date" eval="datetime.now()"/>
+            <field name="prize">10</field>
+            <field name="event_id" ref="event.event_1"/>
+         </record>
+
+         <record id="event2" model="perruqueria.event">
+            <field name="name">L'art dels colors al cabell</field>
+            <field name="date" eval="datetime.now()"/>
+            <field name="prize">12</field>
+            <field name="event_id" ref="event.event_2"/>
+         </record>
+
+         <record id="event3" model="perruqueria.event">
+            <field name="name">Les noves tisores intel·ligents</field>
+            <field name="date" eval="datetime.now()"/>
+            <field name="prize">26</field>
+            <field name="event_id" ref="event.event_3"/>
+         </record>
+
+         <record id="formacio1" model="perruqueria.formacio">
+            <field name="name">Les perruqueries al S. XIX</field>
+            <field name="description">Com era l'art de tallar el cabell al S. XIX segons Karl Marx</field>
+            <field name="manager_id" ref="empleat1"/>
+            <field name="trainer_id" ref="company1"/>
+            <field name="customer_ids" eval="[(6, 0, [ref('company1'), ref('company3')])]"/>
+            <field name="event_id" ref="event1"/>
+         </record>
+
+         <record id="formacio2" model="perruqueria.formacio">
+            <field name="name">L'art dels colors al cabell</field>
+            <field name="description">Paleta de colors i moda actual</field>
+            <field name="manager_id" ref="empleat2"/>
+            <field name="trainer_id" ref="company2"/>
+            <field name="customer_ids" eval="[(6, 0, [ref('company2'), ref('company3')])]"/>
+            <field name="event_id" ref="event2"/>
+         </record>
+
+         <record id="formacio3" model="perruqueria.formacio">
+            <field name="name">Les noves tisores intel·ligents</field>
+            <field name="description">I+D en perruqueria amb Antonio Vivaldi</field>
+            <field name="manager_id" ref="empleat3"/>
+            <field name="trainer_id" ref="company3"/>
+            <field name="customer_ids" eval="[(6, 0, [ref('company3'), ref('company1')])]"/>
+            <field name="event_id" ref="event3"/>
+         </record>
+
+    </data>
+</odoo>
